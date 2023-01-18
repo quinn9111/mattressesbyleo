@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-
-=======
-import logo from './logo.svg';
->>>>>>> feature/be_initial
 import './App.css';
 
 function App() {
   return (
-<<<<<<< HEAD
-    
-=======
+
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -26,12 +19,7 @@ function App() {
         </a>
       </header>
     </div>
->>>>>>> feature/be_initial
-  );
+  )
 }
 
-export default App;
-<<<<<<< HEAD
-=======
-   
->>>>>>> feature/be_initial
+export default App
