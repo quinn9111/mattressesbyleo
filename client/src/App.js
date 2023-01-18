@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import logo from './logo.svg';
->>>>>>> feature/be_initial
 import './App.css';
 
 function App() {
