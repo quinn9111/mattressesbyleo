@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-// import schema from Mattress.js
-const mattressSchema = require('./Mattress');
+// import schema from cart.js
+const Cart = require('./Cart');
 
 const userSchema = new Schema(
   {
@@ -50,7 +50,7 @@ const userSchema = new Schema(
       type: String,
     },
     // set savedMattress to be an array of data that adheres to the mattressSchema
-    savedMattress: [mattressSchema],
+    cart: [Cart.schema]
   },
   // set this to use virtual below
   {

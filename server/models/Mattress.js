@@ -1,4 +1,6 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 const mattressSchema = new Schema({
   name: {
@@ -25,7 +27,17 @@ const mattressSchema = new Schema({
   },
   price: {
     type: Number,
+    required: true,
+    min: 0.99
   },
+  vendor: {
+    type: Schema.Types.ObjectId,
+    ref: 'Vendor',
+    required: true
+  }
 });
 
-module.exports = mattressSchema;
+const Mattress = mongoose.model('Mattress', mattressSchema);
+
+module.exports = Mattress;
+
