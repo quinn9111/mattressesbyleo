@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/quinn9111/mattressesbyleo/issues"
   },
-  "homepage": "https://github.com/quinn9111/mattressesbyleo#readme"
+  "homepage": "https://github.com/quinn9111/mattressesbyleo#readme",
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@emotion/css": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "animate.css": "^4.1.1",
+    "react-router-dom": "^6.7.0"
+  }
 }
