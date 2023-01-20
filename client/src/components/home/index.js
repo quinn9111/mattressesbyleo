@@ -1,11 +1,11 @@
-import { css } from '@emotion/react'
-import { Link } from 'react-router-dom'
 import Categories from '../categories'
 import ProductList from '../products/productList'
+import Nav from '../nav'
 
 const Home = () => {
     return (
         <>
+        <Nav />
             <div className='container home-page'>
             <Categories />
             <ProductList />

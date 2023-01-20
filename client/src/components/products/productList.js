@@ -1,5 +1,8 @@
 const ProductList = () => {
-    return ()
+    return (
+        <>
+        </>
+    )
 }
 
 export default ProductList

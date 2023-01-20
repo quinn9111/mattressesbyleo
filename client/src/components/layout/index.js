@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import { Outlet } from 'react-router-dom'
+import Nav from '../nav'
 
 const Layout = () => {
     return (
@@ -13,3 +14,5 @@ const Layout = () => {
         </div>
     )
 }
+
+export default Layout
