@@ -34,6 +34,9 @@ The list of technologies we used for our project is as follows:
 
 ## Developers
 Cody Bronsell
+
 Victoria Mota
+
 Neeman Elchurafa
+
 Jessica Medina
