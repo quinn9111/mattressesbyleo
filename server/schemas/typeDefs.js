@@ -63,8 +63,8 @@ const typeDefs = gql`
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    updateMattress(_id: ID!, quantity: Int!): Mattress
     addCart(mattresses: [ID]!): Cart
+    updateMattress(_id: ID!, quantity: Int!): Mattress
   }
 `;
 

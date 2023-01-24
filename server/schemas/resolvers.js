@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Mattress, Vendor, Cart } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+const { User, Mattress, Vendor, Cart } = require('../models');
 
 const resolvers = {
   Query: {
@@ -20,7 +20,6 @@ const resolvers = {
           $regex: name
         };
       }
-
       return await Mattress.find(params).populate('vendor');
     },
     mattress: async (parent, { _id }) => {
