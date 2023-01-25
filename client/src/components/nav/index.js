@@ -22,19 +22,19 @@ const Nav = () => {
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='/products' >
+                    to='products' >
                     <h3>products</h3>
                 </NavLink>
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='/login' >
+                    to='login' >
                     <h3>login</h3>
                 </NavLink>
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='/cart' >
+                    to='cart' >
                     <h3>cart</h3>
                 </NavLink>
 

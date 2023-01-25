@@ -38,7 +38,6 @@ export const QUERY_ALL_MATTRESSES = gql`
         }
       }
     }
-  }
 `;
 
 export const QUERY_VENDORS= gql`

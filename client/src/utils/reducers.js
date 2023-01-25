@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import {
   UPDATE_MATTRESSES,
   ADD_TO_CART,
-  UPDATE_CART_QUANTITY,
+  UPDATE_CART,
   REMOVE_FROM_CART,
   ADD_MULTIPLE_TO_CART,
   UPDATE_VENDORS,
@@ -32,7 +32,7 @@ export const reducer = (state, action) => {
         cart: [...state.cart, ...action.mattresses],
       };
 
-    case UPDATE_CART_QUANTITY:
+    case UPDATE_CART:
       return {
         ...state,
         cartOpen: true,

@@ -1,4 +1,4 @@
-import ProductList from '../products/productList'
+import VendorsList from '../brands/brands'
 
 
 
@@ -9,7 +9,7 @@ const Home = () => {
 
             <div className='container categories'>
             <h1>check out our vendors</h1>
-            <ProductList />
+            <VendorsList />
             </div>
             {/* <Cart /> */}
         </div>
