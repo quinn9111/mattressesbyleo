@@ -1,17 +1,10 @@
-import React, { useState } from "react"
-import { css } from '@emotion/react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function (props) {
-  let [authMode, setAuthMode] = useState("signin")
-
-  const changeAuthMode = () => {
-    setAuthMode(authMode === "signin" ? "signup" : "signin")
-  }
-
-  if (authMode === "signin") {
+const Login = () => {
     return (
-      <div className="Auth-form-container">
+        <>
+        <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
@@ -48,11 +41,13 @@ export default function (props) {
           </div>
         </form>
       </div>
+        </>
     )
-  }
-
+}
+const SignUp = () => {
   return (
-    <div className="Auth-form-container">
+      <>
+<div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
@@ -97,5 +92,6 @@ export default function (props) {
         </div>
       </form>
     </div>
-  )
+    </>
+    )
 }
