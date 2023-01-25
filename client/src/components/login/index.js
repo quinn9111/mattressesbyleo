@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import './index.scss'
+//import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -10,7 +11,11 @@ const Login = () => {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
+
               {/* <span className="link-primary" onClick={changeAuthMode}>
+
+{/*               <span className="link-primary" onClick={changeAuthMode}>
+
                 Sign Up
               </span> */}
             </div>
@@ -44,7 +49,7 @@ const Login = () => {
         </>
     )
 }
-const SignUp = () => {
+/* const SignUp = () => {
   return (
       <>
 <div className="Auth-form-container">
@@ -53,10 +58,16 @@ const SignUp = () => {
           <h3 className="Auth-form-title">Sign In</h3>
           <div className="text-center">
             Already registered?{" "}
+
             {/* <span className="link-primary" onClick={changeAuthMode}>
               Sign In
-            </span> */}
-          </div>
+            </span> 
+          </div>*/
+        /*  <span className="link-primary" onClick={changeAuthMode}>
+              Sign In
+            </span> */
+         /*  </div>
+
           <div className="form-group mt-3">
             <label>Full Name</label>
             <input
@@ -93,7 +104,6 @@ const SignUp = () => {
       </form>
     </div>
     </>
-    )
-}
+    )}*/
 
 export default Login
