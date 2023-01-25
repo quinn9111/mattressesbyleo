@@ -4,9 +4,8 @@ import Layout from './components/layout'
 import Home from './components/home'
 import ProductList from './components/products/productList'
 import Login from './components/login'
-import Cart from './components/cart'
+// import Cart from './components/cart'
 import React, { useState } from 'react'
-import ProductList from './components/products/productList'
 
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path='products' element={<ProductList />} />
             <Route path='login' element={<Login />} />
-            <Route path='cart' element={<Cart />} />
+            {/* <Route path='cart' element={<Cart />} /> */}
       </Routes>
     </>
   )

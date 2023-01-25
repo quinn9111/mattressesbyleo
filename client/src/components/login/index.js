@@ -10,9 +10,9 @@ const Login = () => {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              <span className="link-primary" onClick={changeAuthMode}>
+              {/* <span className="link-primary" onClick={changeAuthMode}>
                 Sign Up
-              </span>
+              </span> */}
             </div>
             <div className="form-group mt-3">
               <label>Email address</label>
@@ -53,9 +53,9 @@ const SignUp = () => {
           <h3 className="Auth-form-title">Sign In</h3>
           <div className="text-center">
             Already registered?{" "}
-            <span className="link-primary" onClick={changeAuthMode}>
+            {/* <span className="link-primary" onClick={changeAuthMode}>
               Sign In
-            </span>
+            </span> */}
           </div>
           <div className="form-group mt-3">
             <label>Full Name</label>
