@@ -3,17 +3,24 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
-        <header>
-            <Link to='/'>
-                <h1>mattresses by leo</h1>
-            </Link>
-            <Link to ='/products'>
-            </Link>
-            <Link to ='/search'>
-            </Link>
-            <Link to ='/Cart'>
-            </Link>
-        </header>
+        <div className='nav-bar'>
+            <nav>
+                <NavLink to='/'>
+                    <h1>mattresses by leo</h1>
+                </NavLink>
+                <NavLink 
+                        activeclassname='active',
+                        to ='/products'>
+                    <h3>
+
+                    <h3>    
+                <NavLink/>
+            <NavLink to ='/search'>
+            </NavLink>
+            <NavLink to ='/Cart'>
+            </NavLink>
+            </nav>
+            </div>
     )
     
 }

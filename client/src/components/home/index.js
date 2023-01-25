@@ -1,16 +1,16 @@
 import Categories from '../categories'
 import ProductList from '../products/productList'
 import Nav from '../nav'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
         <>
-        <Nav />
-            <div className='container home-page'>
-            <Categories />
-            <ProductList />
-            /*Cart
+        <div className='container home-page'>
+            <div className='container searchbar'>
+                <Nav />
             </div>
+        </div>
         </>
     )
 }

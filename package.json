@@ -1,7 +1,7 @@
 {
   "name": "mattressesbyleo",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Mattresses By Leo",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -29,8 +29,9 @@
     "@emotion/react": "^11.10.5",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "animate.css": "^4.1.1",
-    "react-router-dom": "^6.7.0",
+    "express": "^4.18.2",
     "mongoose": "^6.8.4",
+    "react-router-dom": "^6.7.0",
     "stripe": "^11.6.0"
   }
 }
