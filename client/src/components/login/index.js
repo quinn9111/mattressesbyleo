@@ -95,3 +95,5 @@ const SignUp = () => {
     </>
     )
 }
+
+export default Login
