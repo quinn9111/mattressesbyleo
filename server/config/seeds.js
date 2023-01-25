@@ -12,7 +12,7 @@ db.once('open', async () => {
     { name: 'Purple' }
   ]);
 
-  console.log('vendors seeded');
+  console.log('Vendor data has been seeded');
 
   await Mattress.deleteMany();
 
@@ -46,7 +46,7 @@ db.once('open', async () => {
     }
   ]);
 
-  console.log('mattresses seeded');
+  console.log('Mattress data has been seeded');
 
   await User.deleteMany();
 
@@ -69,7 +69,7 @@ db.once('open', async () => {
     password: 'password12345'
   });
 
-  console.log('users seeded');
+  console.log('User data has been seeded');
 
   process.exit();
 });

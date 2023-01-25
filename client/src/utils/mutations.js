@@ -16,7 +16,7 @@ export const ADD_CART = gql`
     addCart(mattresses: $mattresses) {
       purchaseDate
       mattresses {
-        mattress_Id
+        _Id
         name
         description
         price
