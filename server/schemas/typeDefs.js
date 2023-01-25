@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
 
   type Mattress {
-    mattress_Id: ID
+    _Id: ID
     name: String
     description: String
     image: String
@@ -12,11 +12,13 @@ const typeDefs = gql`
     vendor: [Vendor]
   }
 
+
   type User {
-    user_id: ID
+    _id: ID
     firstName: String
     lastName: String
     email: String
+    password: String
     address: String
     address_2: String
     zipCode: String
@@ -27,7 +29,7 @@ const typeDefs = gql`
   }
 
   type Vendor {
-    vendor_id: ID
+    _id: ID
     name: String
   }
 
@@ -57,6 +59,12 @@ const typeDefs = gql`
     user: User
     checkout(mattress: [ID]!): Checkout
     cart(_id: ID!): Cart
+  }
+
+  type Query {
+    me: User
+    users: [User]
+    user(email: String!): User
   }
 
   type Mutation {

@@ -3,14 +3,14 @@ import { gql } from '@apollo/client';
 export const QUERY_MATTRESSES = gql`
   query getMattresses($vendor: ID) {
     mattress(vendor: $vendor) {
-      mattress_Id
+      _Id
       name
       description
       price
       image
       size
       vendor {
-        vendor_id
+        _id
       }
     }
   }
@@ -27,7 +27,7 @@ export const QUERY_CHECKOUT = gql`
 export const QUERY_ALL_MATTRESSES = gql`
   {
     mattresses {
-        mattress_Id
+        _Id
         name
         description
         price
@@ -43,7 +43,7 @@ export const QUERY_ALL_MATTRESSES = gql`
 export const QUERY_VENDORS= gql`
   {
     vendors {
-      vendor_id
+      _id
       name
     }
   }
@@ -58,7 +58,7 @@ export const QUERY_USER = gql`
         _id
         purchaseDate
         mattresses {
-            mattress_Id
+            _Id
             name
             description
             price
