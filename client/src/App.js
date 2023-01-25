@@ -1,30 +1,36 @@
-import { css } from '@emotion/react'
-// import { Route, Routes } from 'react-router-dom'
-// import Layout from './components/layout'
-// import Home from './components/home'
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/layout'
+import Home from './components/home'
+import ProductList from './components/products/productList'
+import Login from './components/auth'
+import Cart from './components/cart'
+import React, { useState } from 'react'
+import ProductList from './components/products/productList'
 
 
 function App() {
-  return (
+  const [width, setWindowWidth] = useState(0)
 
-    <div>
-      <div css={css({
-        margin: 10,
-        padding: 10,
-        backgroundColor: '#eee',
-      })}>
-        This is an example of <code>`css`</code> using an object.
-      </div>
-      <div css={css`
-        margin: 10px;
-        padding: 10px;
-        background-color: #eee;
-      `}>
-        This is an example of <code>`css`</code> using a tagged template literal.
-      </div>
-    </div>
-  );
+  const updateDimensions = () => {
+    width = window.innerWidth
+    setWindowWidth(width)
+
+    updateDimensions()
+  }
+
+  return (
+    <>
+      <Routes>
+          <Route path='/' element={<Layout />} />
+            <Route index element={<Home />} />
+            <Route path='products' element={<ProductList />} />
+            <Route path='login' element={<Login />} />
+            <Route path='cart' element={<Cart />} />
+      </Routes>
+    </>
+  )
 }
 
-
 export default App
+

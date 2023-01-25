@@ -1,25 +1,46 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Search from '../search'
+import { Link, NavLink } from 'react-router-dom'
 
 const Nav = () => {
     return (
         <div className='nav-bar'>
-            <nav>
                 <Link to='/'>
                     <h1>mattresses by leo</h1>
+                    //mb logo too
                 </Link>
-                <Link 
-                        activeclassname='active',
-                        to ='/products'>
-                    <h3>
 
-                    <h3>    
-                <Link/>
-                <Link to ='/search'>
-                </Link>
-                 <Link to ='/Cart'>
-                </Link>
-            </nav>
+                <Search />
+
+                <nav>
+                <NavLink
+                    exact='true'
+                    activeclassname='active'
+                    to='/'>
+                    <h3>home</h3>
+                </NavLink>
+                <NavLink
+                    exact='true'
+                    activeclassname='active'
+                    to='/products' >
+                    <h3>products</h3>
+                </NavLink>
+                <NavLink
+                    exact='true'
+                    activeclassname='active'
+                    to='/login' >
+                    <h3>login</h3>
+                </NavLink>
+                <NavLink
+                    exact='true'
+                    activeclassname='active'
+                    to='/cart' >
+                    <h3>cart</h3>
+                </NavLink>
+
+
+
+                </nav>    
         </div>
     )
     
