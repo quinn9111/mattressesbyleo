@@ -10,6 +10,7 @@ const Home = () => {
             <div className='container searchbar'>
                 <Nav />
             </div>
+            
         </div>
         </>
     )
