@@ -11,11 +11,7 @@ const resolvers = {
       me: async (parent, args) => {
         const userData = await User.findOne({})
           .select('-__v -password')
-<<<<<<< HEAD
-        return userData;
-=======
         return userData
->>>>>>> fe/develop
       },
       
     mattresses: async (parent, { vendor, name }) => {
