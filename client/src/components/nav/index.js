@@ -22,7 +22,7 @@ const Nav = () => {
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='products' >
+                    to='/brandProducts' >
                     <h3>products</h3>
                 </NavLink>
                 <NavLink

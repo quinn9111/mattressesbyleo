@@ -1,6 +1,7 @@
 import React from 'react'
-
-//import { Link } from 'react-router-dom'
+import { useMutation } from'@apollo/client'
+import { Link } from 'react-router-dom'
+import Auth from'../utils/auth'
 
 const Login = () => {
     return (
@@ -11,11 +12,7 @@ const Login = () => {
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="text-center">
               Not registered yet?{" "}
-              {/* <span className="link-primary" onClick={changeAuthMode}>
-              {/*  <span className="link-primary" onClick={changeAuthMode}>
-              {/* <span className="link-primary" onClick={changeAuthMode}>
-                Sign Up
-              </span>  */}
+              <Link to='/signUp'>sign up now</Link>
             </div>
             <div className="form-group mt-3">
               <label>Email address</label>
