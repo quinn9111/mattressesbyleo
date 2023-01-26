@@ -44,7 +44,7 @@ export function idbPromise(storeName, method, object) {
           store.delete(object._id)
           break
         default:
-          console.log('No valid method')
+          console.log('no valid method')
           break
       }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from '../search'
+// import Search from '../search'
 import { Link, NavLink } from 'react-router-dom'
 import './index.scss'
 
@@ -13,7 +13,7 @@ const Nav = () => {
                     <h1>mattresses by leo</h1>
                 </Link>
 
-                <Search />
+                {/* <Search /> */}
 
                 <nav>
                     <ul>
