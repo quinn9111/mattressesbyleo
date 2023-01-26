@@ -1,9 +1,11 @@
-const mongoose = require('mongoose');
-mongoose.set("strictQuery", false);
+const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mattressesByLeo', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.set("strictQuery", false)
 
-module.exports = mongoose.connection;
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mattressesByLeo', 
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+
+module.exports = mongoose.connection

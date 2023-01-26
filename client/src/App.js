@@ -1,13 +1,16 @@
-import { Router, Route, Routes } from 'react-router-dom'
-//import Layout from './components/layout'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 import { StoreProvider } from './utils/GlobalState'
-import Home from './components/home'
-import VendorsList from './components/brands/brands'
-import Login from './pages/login'
-import SignUp from './pages/signUp'
-import Nav from './components/nav'
+
+import Home from './pages/Home'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+import Layout from './components/layout'
+import OrderHistory from './pages/OrderHistory'
+import BrandMattresses from './components/productsBrands'
+
 
 // import Cart from './components/cart'
 //import React, { useState } from 'react'
@@ -35,57 +38,25 @@ const client = new ApolloClient({
 })
 
 function App() {
-/*   const [width, setWindowWidth] = useState(0)
-
-  const updateDimensions = () => {
-    width = window.innerWidth
-    setWindowWidth(width)
-
-    updateDimensions()
-  } */
 
   return (
     <ApolloProvider client={client}>
-      <Router>
+    {/*   <Router> */}
         <div>
           <StoreProvider>
-            <Nav />
             <Routes>
-              <Route 
-                path='/' 
-                element={<Home />} 
-              />
-              <Route 
-                path='/pages/login' 
-                element={<Login />} 
-              />
-              <Route 
-                path='/pages/signup' 
-                element={<SignUp />} 
-              />
-              {/* <Route 
-                path='/success' 
-                element={<Success />} 
-              /> */}
-              {/* <Route 
-                path='/orderHistory' 
-                element={<OrderHistory />} 
-              /> */}
-              <Route 
-                path='/brands' 
-                element={<VendorsList />} 
-              />
-              {/* <Route 
-                path='*' 
-                element={<NoMatch />} 
-              /> */}
+              <Route path='/' element={<Layout />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/signup' element={<SignUp />} />
+              <Route path='/orderhistory' element={<OrderHistory />} />
+              <Route path='/productsbrands' element={<BrandMattresses />} />
             </Routes>
           </StoreProvider>
         </div>
-      </Router>
+     {/*  </Router> */}
     </ApolloProvider>
   )
 }
 
 export default App
-

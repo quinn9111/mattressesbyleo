@@ -1,8 +1,8 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext } from "react"
 import { useMattressReducer } from './reducers'
 
-const StoreContext = createContext();
-const { Provider } = StoreContext;
+const StoreContext = createContext()
+const { Provider } = StoreContext
 
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useMattressReducer({
@@ -11,13 +11,13 @@ const StoreProvider = ({ value = [], ...props }) => {
     cartOpen: false,
     vendors: [],
     currentVendor: '',
-  });
+  })
 
-  return <Provider value={[state, dispatch]} {...props} />;
-};
+  return <Provider value={[state, dispatch]} {...props} />
+}
 
 const useStoreContext = () => {
-  return useContext(StoreContext);
+  return useContext(StoreContext)
 };
 
-export { StoreProvider, useStoreContext };
+export { StoreProvider, useStoreContext }

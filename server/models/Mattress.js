@@ -32,4 +32,3 @@ const mattressSchema = new Schema({
 const Mattress = mongoose.model('Mattress', mattressSchema);
 
 module.exports = Mattress;
-
