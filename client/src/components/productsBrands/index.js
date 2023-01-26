@@ -5,6 +5,7 @@ import { QUERY_MATTRESSES } from '../../utils/queries'
 import { useQuery } from '@apollo/client'
 import { idbPromise } from '../../utils/helpers'
 import ProductItem from '../productItems'
+import { Link } from 'react-router-dom'
 
 
 const BrandMattresses = () => {
@@ -20,7 +21,7 @@ const BrandMattresses = () => {
             type: UPDATE_MATTRESSES,
             mattreses: data.mattresses,
           })
-          data.mattreses.forEach((mattress) => {
+          data.mattresses.forEach((mattress) => {
             idbPromise('mattresses', 'put', mattress)
           })
         } else if (!loading) {
@@ -61,7 +62,7 @@ const BrandMattresses = () => {
           ) : (
             <h3>your cart is empty :^(</h3>
           )}
-
+        <Link to='/'>go back to home</Link>
         </div>
       )
 }
