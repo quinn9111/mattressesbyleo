@@ -11,10 +11,6 @@ const mattressSchema = new Schema({
     type: String,
     required: true,
   },
-  mattress_Id: {
-    type: String,
-    required: true,
-  },
   image: {
     type: String,
   },
@@ -36,4 +32,3 @@ const mattressSchema = new Schema({
 const Mattress = mongoose.model('Mattress', mattressSchema);
 
 module.exports = Mattress;
-

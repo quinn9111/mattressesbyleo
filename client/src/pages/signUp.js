@@ -1,53 +1,83 @@
-  import React from "react"
+  import React, { useState } from "react"
+  import Auth from '../utils/auth'
+  import { Link } from 'react-router-dom'
+  import { useMutation } from '@apollo/client'
+  import { ADD_USER } from "../utils/mutations"
   
   const SignUp = () => {
+
+    const [formState, setFormState] = useState({
+        email: '',
+        username:'',
+        password: ''
+    })
+
+    const [addUser, { error }] = useMutation(ADD_USER)
+
+
+    const handleChange = (event) => {
+        const { name, value } = event.target
+
+        setFormState({
+            ...formState,
+            [name]: value
+        })
+    }
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault()
+        const mutationResponse = await addUser({
+            variables: { ...formState }
+        })
+
+        const token = mutationResponse.data.addUser.token
+        Auth.login(token)
+    }
+
    return (
        <>
-        <div className="Auth-form-container">
-        <form className="Auth-form">
-         <div className="Auth-form-content">
-           <h3 className="Auth-form-title">Sign In</h3>
-           <div className="text-center">
-             Already registered?{" "}
-            <span className="link-primary" onClick={changeAuthMode}>
-              Sign In
-            </span> 
-          </div>
-           </div>
-           <div className="form-group mt-3">
-             <label>Full Name</label>
-             <input
+        <div className="container my-1">
+            <Link to="/login">← Go to Login</Link>
+
+        <h2>Signup</h2>
+        <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+            <label htmlFor="email">email:</label>
+            <input
+                placeholder="enter your email"
+                name="email"
                 type="email"
-                className="form-control mt-1"
-                placeholder="e.g Jane Doe"
-             />
-           </div>
-           <div className="form-group mt-3">
-                <label>Email address</label>
-                <input
-                type="email"
-                className="form-control mt-1"
-                placeholder="Email Address"
-             />
-           </div>
-           <div className="form-group mt-3">
-                <label>Password</label>
-                <input
-                type="password"
-                className="form-control mt-1"
-                placeholder="Password"
-                 />
-            </div>
-            <div className="d-grid gap-2 mt-3">
-                 <button type="submit" className="btn btn-primary">
-                    Submit
-                </button>
-            </div>
-            <p className="text-center mt-2">
-                 Forgot <a href="#">password?</a>
-            </p>
-            </form>
-        </div>  
+                id="email"
+                value={formState.email}
+                onChange={handleChange}
+            />
+        </div>
+        <div className="flex-row space-between my-2">
+            <label htmlFor="username">username:</label>
+            <input
+                placeholder="create a username"
+                name="lastName"
+                type="lastName"
+                id="lastName"
+                value={formState.username}
+                onChange={handleChange}
+            />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">password:</label>
+          <input
+            placeholder="make it a good one"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
         </>
 
     )

@@ -7,7 +7,6 @@ export const QUERY_MATTRESSES = gql`
       name
       description
       price
-      image
       size
       vendor {
         vendor_id
@@ -31,7 +30,6 @@ export const QUERY_ALL_MATTRESSES = gql`
         name
         description
         price
-        image
         size
         vendor {
           name
@@ -62,7 +60,6 @@ export const QUERY_USER = gql`
             name
             description
             price
-            image
             size
         }
       }

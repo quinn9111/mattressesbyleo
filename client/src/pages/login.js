@@ -1,48 +1,74 @@
-import React from 'react'
-import { useMutation } from'@apollo/client'
+import React, { useState } from 'react'
+import { useMutation } from '@apollo/client'
 import { Link } from 'react-router-dom'
-import Auth from'../utils/auth'
+import { LOGIN } from '../utils/mutations'
+import Auth from '../utils/auth'
 
-const Login = () => {
-    return (
-        <>
-        <div className="Auth-form-container">
-        <form className="Auth-form">
-          <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
-            <div className="text-center">
-              Not registered yet?{" "}
-              <Link to='/signUp'>sign up now</Link>
-            </div>
-            <div className="form-group mt-3">
-              <label>Email address</label>
-              <input
-                type="email"
-                className="form-control mt-1"
-                placeholder="Enter email"
-              />
-            </div>
-            <div className="form-group mt-3">
-              <label>Password</label>
-              <input
-                type="password"
-                className="form-control mt-1"
-                placeholder="Enter password"
-              />
-            </div>
-            <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </div>
-            <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
-            </p>
+function Login(props) {
+  const [formState, setFormState] = useState({ username: '', password: '' })
+  const [login, { error }] = useMutation(LOGIN)
+
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormState({
+      ...formState,
+      [name]: value,
+    })
+  }
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault()
+    try {
+      const mutationResponse = await login({
+        variables: { username: formState.username, password: formState.password },
+      })
+
+      const token = mutationResponse.data.login.token
+      Auth.login(token)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+
+  return (
+    <div className="container my-1">
+      <Link to="/signup">← Go to Signup</Link>
+
+      <h2>log in</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="username">username:</label>
+          <input
+            placeholder="enter your username"
+            name="username"
+            type="username"
+            id="username"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        {error ? (
+          <div>
+            <p className="error-text">the username or password is incorrect</p>
           </div>
-        </form>
-      </div>
-        </>
-    )
+        ) : null}
+      </form>
+      <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+    </div>
+  )
 }
-  
+
 export default Login

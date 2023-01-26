@@ -7,7 +7,6 @@ const Nav = () => {
         <div className='nav-bar'>
                 <Link to='/'>
                     <h1>mattresses by leo</h1>
-                    //mb logo too
                 </Link>
 
                 <Search />
@@ -22,19 +21,19 @@ const Nav = () => {
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='/brandProducts' >
+                    to='/productsBrands' >
                     <h3>products</h3>
                 </NavLink>
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='login' >
+                    to='/login' >
                     <h3>login</h3>
                 </NavLink>
                 <NavLink
                     exact='true'
                     activeclassname='active'
-                    to='cart' >
+                    to='/cart' >
                     <h3>cart</h3>
                 </NavLink>
 
