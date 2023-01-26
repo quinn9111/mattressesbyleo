@@ -1,0 +1,15 @@
+$primary-color: #9cb4c9;
+$secondary-color: #e1e1e1;
+$tertiary-color: #000000;
+@import 'animate.css';
+
+input,
+textarea {
+  font-family: 'Helvetica-Neue';
+}
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
