@@ -6,15 +6,6 @@ const Cart = require('./Cart');
 
 const userSchema = new Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    user_Id: {
-      type: String,
-      required: true,
-    },
     email: {
       type: String,
       required: true,

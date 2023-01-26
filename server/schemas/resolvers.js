@@ -8,6 +8,12 @@ const resolvers = {
     vendors: async () => {
       return await Vendor.find();
     },
+      me: async (parent, args) => {
+        const userData = await User.findOne({})
+          .select('-__v -password')
+        return userData;
+      },
+      
     mattresses: async (parent, { vendor, name }) => {
       const params = {};
 
