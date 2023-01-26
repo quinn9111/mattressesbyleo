@@ -1,7 +1,7 @@
 {
-  "name": "googlebooks-app",
+  "name": "mattressesbyleo",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Mattresses By Leo",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -14,5 +14,24 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinn9111/mattressesbyleo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quinn9111/mattressesbyleo/issues"
+  },
+  "homepage": "https://github.com/quinn9111/mattressesbyleo#readme",
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@emotion/css": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@stripe/react-stripe-js": "^1.16.4",
+    "animate.css": "^4.1.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "stripe": "^11.6.0"
   }
 }
