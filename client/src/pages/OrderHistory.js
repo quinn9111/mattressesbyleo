@@ -14,7 +14,7 @@ function OrderHistory() {
   return (
     <>
       <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
+        <Link to="/">back to our products</Link>
 
         {user ? (
           <>
@@ -29,7 +29,7 @@ function OrderHistory() {
                 <div className="flex-row">
                   {order.products.map(({ _id, name, price }, index) => (
                     <div key={index} className="card px-1 py-1">
-                      <Link to={`/products/${_id}`}>
+                      <Link to={`/mattresses/${_id}`}>
                         <p>{name}</p>
                       </Link>
                       <div>
