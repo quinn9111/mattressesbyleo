@@ -1,5 +1,5 @@
 $primary-color: #9cb4c9;
-$secondary-color: #e1e1e1;
+$secondary-color: #ffffff;
 $tertiary-color: #000000;
 @import 'animate.css';
 
@@ -9,7 +9,7 @@ textarea {
 }
   
   @media screen and (max-width: 768px) {
-    .card {
+    .container {
       width: 100%;
     }
   }

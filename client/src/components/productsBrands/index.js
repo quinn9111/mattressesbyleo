@@ -59,9 +59,8 @@ const BrandMattresses = () => {
                 />
               ))}
             </div>
-          ) : (
-            <h3>your cart is empty :^(</h3>
-          )}
+          ) : ( <h4>like what you see?</h4>)}
+
         <Link to='/'>go back to home</Link>
         </div>
       )

@@ -8,7 +8,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Layout from './components/layout'
-import OrderHistory from './pages/OrderHistory'
+import Checkout from './components/cart'
 import BrandMattresses from './components/productsBrands'
 
 
@@ -49,7 +49,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/login' element={<Login />} />
               <Route path='/signup' element={<SignUp />} />
-              <Route path='/orderhistory' element={<OrderHistory />} />
+              <Route path='/cart' element={<Checkout />} />
               <Route path='/productsbrands' element={<BrandMattresses />} />
             </Routes>
           </StoreProvider>
