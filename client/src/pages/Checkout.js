@@ -3,7 +3,7 @@
   import { Link } from 'react-router-dom'
   import { useMutation } from '@apollo/client'
   import { ADD_USER } from "../utils/mutations"
-  import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+  //import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
   const Checkout = () => {
         const [amount, setAmount] = useState(0);
         const [currency, setCurrency] = useState("");
@@ -142,10 +142,10 @@
             </div>
             <div className="flex-row space-between my-2">
                
-                <CardElement
+                
                 className="sr-input sr-card-element"
                 options={cardElementOptions}
-                />
+                
             </div>
             
        </div>
