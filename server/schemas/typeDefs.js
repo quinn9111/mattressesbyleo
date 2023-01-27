@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+
 const typeDefs = gql`
 
   type Mattress {
@@ -25,18 +26,6 @@ const typeDefs = gql`
     state: String
     phoneNumber: String
     carts: [Cart]
-  }
-
-  type Vendor {
-    _id: ID
-
-  type Mattress {
-    _Id: ID
-    name: String
-    description: String
-    size: String
-    price: Float
-    vendor: [Vendor]
   }
 
   type Vendor {
