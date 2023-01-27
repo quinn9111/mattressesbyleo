@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const { Schema } = mongoose;
+const { Schema } = mongoose
 
 const mattressSchema = new Schema({
   name: {
@@ -27,8 +27,8 @@ const mattressSchema = new Schema({
     ref: 'Vendor',
     required: true
   }
-});
+})
 
-const Mattress = mongoose.model('Mattress', mattressSchema);
+const Mattress = mongoose.model('Mattress', mattressSchema)
 
-module.exports = Mattress;
+module.exports = Mattress

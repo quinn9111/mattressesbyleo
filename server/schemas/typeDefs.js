@@ -3,11 +3,15 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 
+  type Vendor {
+    _id: ID
+    name: String
+  }
+
   type Mattress {
-    _Id: ID
+    _id: ID
     name: String
     description: String
-    image: String
     size: String
     price: Float
     vendor: [Vendor]
@@ -28,6 +32,7 @@ const typeDefs = gql`
     carts: [Cart]
   }
 
+
   type Vendor {
     _id: ID
     name: String
@@ -36,6 +41,7 @@ const typeDefs = gql`
     token: ID
     user: User
   }
+
   type Cart {
     _id: ID
     purchaseDate: String

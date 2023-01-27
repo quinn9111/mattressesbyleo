@@ -11,6 +11,7 @@ const resolvers = {
       me: async (parent, args) => {
         const userData = await User.findOne({})
           .select('-__v -password')
+
         return userData
       },
       
