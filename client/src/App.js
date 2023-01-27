@@ -12,12 +12,6 @@ import Checkout from './components/cart'
 import BrandMattresses from './components/productsBrands'
 
 
-// import Cart from './components/cart'
-//import React, { useState } from 'react'
-
-//import Cart from './components/cart'
-// import React, { useState } from 'react'
-
 const httpLink = createHttpLink({
   uri: '/graphql'
 })
