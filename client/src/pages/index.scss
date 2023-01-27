@@ -1,3 +1,32 @@
 body {
-    
+    width: 100%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    padding: 7px 0;
+}
+
+button {
+    color: #3d4dfc;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #3d4dfc;
+    float: left;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+        background: #3d4dfc;
+        color: #ffffff;
+    }
+}
+
+Link {
+    font-size: 24px
 }

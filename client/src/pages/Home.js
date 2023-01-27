@@ -1,3 +1,4 @@
+import Checkout from '../components/cart'
 import BrandMattresses from '../components/productsBrands'
 import VendorsList from '../components/vendors'
 
@@ -10,7 +11,7 @@ const Home = () => {
             <h1>check out our vendors</h1>
             <VendorsList />
             <BrandMattresses />
-            {/* <Cart /> */}
+            <Checkout />
         </div>
         </>
     )
